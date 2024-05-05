@@ -73,6 +73,7 @@
         justify-content: space-between;
         li{
             list-style: none;
+            position: relative;
             a{
                 text-decoration: none;
                 font-size: 14px;
@@ -85,8 +86,35 @@
                 display: block;
             }
         }
+        li:hover .header_menu_dropdown{
+            opacity: 1;
+            visibility: visible;
+        }
         .active_menu a{
             color: map.get($theme-colors,"main");
+        }
+        .header_menu_dropdown{
+            background: black;
+            display: block;
+            position: absolute;
+            width: 180px;
+            z-index: 9;
+            padding: 5px 0;
+            transition: all, 0.3s ;
+            opacity: 0;
+            visibility: hidden;
+            li{
+                a{
+                    color: white;
+                    text-transform: capitalize;
+                    font-weight: 400;
+                    padding: 5px 15px;
+                    text-align: center;
+                }
+                :hover {
+                    color: map.get($theme-colors,"main");
+                }
+            }
         }
     }
 }

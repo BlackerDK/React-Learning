@@ -103,8 +103,20 @@ const HeaderLayout = () => {
                             <ul>
                                 {
                                     menus?.map((menu, menuKey) => (
-                                        <li key={menuKey} className={menuKey===0 ? "active_menu" : ""}>
+                                        <li key={menuKey} className={menuKey === 0 ? "active_menu" : ""}>
                                             <Link to={menu?.path}>{menu?.name}</Link>
+                                            {
+                                                menu.child && (
+                                                    <ul className="header_menu_dropdown">
+                                                        {menu?.child.map((childrenItem, childKey) => (
+                                                            <li key={`${menuKey}-${childKey}`}>
+                                                                <Link to={childrenItem.path}>{childrenItem.name}</Link>
+                                                            </li>
+                                                        )
+                                                        )}
+                                                    </ul>
+                                                )
+                                            }
                                         </li>
                                     ))}
                             </ul>
