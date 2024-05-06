@@ -1,6 +1,6 @@
 import { memo, useState } from "react"
 import './style.scss';
-import { AiOutlineFacebook } from "react-icons/ai";
+import { AiOutlineFacebook, AiOutlineMenu, AiOutlinePhone } from "react-icons/ai";
 import { AiOutlineMail } from "react-icons/ai";
 import { AiOutlineYoutube } from "react-icons/ai";
 import { AiOutlineUser } from "react-icons/ai";
@@ -10,7 +10,8 @@ import { formatters } from "utils/formatter";
 import { ROUTERS } from "utils/router";
 
 const HeaderLayout = () => {
-    const [menus, setMenus] = useState([
+    const [isShowCategories, setShowCategories] = useState(true);   
+    const [menus] = useState([
         {
             name: "Trang chủ",
             path: ROUTERS.USER.HOME,
@@ -134,6 +135,67 @@ const HeaderLayout = () => {
                                     <Link to="#"><AiOutlineShoppingCart /></Link><span>5</span>
                                 </li>
                             </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="container">
+                <div className="row hero_categories_container">
+                    <div className="col-lg-3 hero_categories">
+                        <div className="hero_categories_all" onClick={() => setShowCategories(!isShowCategories)}>
+                            <AiOutlineMenu />
+                            Danh sách sản phẩm
+                        </div>
+                        {
+                                <ul className={isShowCategories ? "" : "hidden"}>
+                                <li>
+                                    <Link to={"#"}>Laptop gamming</Link>
+                                </li>
+                                <li>
+                                    <Link to={"#"}>PC</Link>
+                                </li>
+                                <li>
+                                    <Link to={"#"}>Keybroad</Link>
+                                </li>
+                                <li>
+                                    <Link to={"#"}>ASUS</Link>
+                                </li>
+                                <li>
+                                    <Link to={"#"}>DELL</Link>
+                                </li>
+                            </ul>
+                        }
+
+                    </div>
+                    <div className="col-lg-9 hero_search_container">
+                        <div className="hero_search">
+                            <div className="hero_search_form">
+                            <form>
+                                <input type="text" value="" name="" placeholder="Bạn muốn tìm gì ?"></input>
+                                <button type="submit">Tìm kiếm</button>
+                            </form>
+                            </div>
+                            <div className="hero_search_phone">
+                                <div className="hero_phone_icon">
+                                    <AiOutlinePhone/>
+                                </div>
+                                <div className="hero_phone_number">
+                                    <p>0123456789</p>
+                                    <span>Hỗ trợ 24/7</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="hero_items">
+                            <div className="hero_text">
+                                <span>Laptop xịn</span>
+                                <h2>Pc chất lượng <br/>
+                                nhất Việt Nam
+                                </h2>
+                                <p>Miễn phi giao dịch</p>
+                                <Link to={"#"} className="primary_button">
+                                    Mua ngay
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </div>
