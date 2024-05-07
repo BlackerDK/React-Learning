@@ -52,7 +52,7 @@ const FooterLayout = () => {
                             <p>Đăng kí thông tin tại đây</p>
                             <form className="" action="#">
                                 <div className="input_group">
-                                    <input className="" type="text" placeholder="Nhập thông tin vào đây"></input>
+                                    <input type="text" placeholder="Nhập thông tin vào đây"></input>
                                     <button className="button_submit" type="submit">Đăng kí</button>
                                 </div>
                                 <div className="footer_widget_social">

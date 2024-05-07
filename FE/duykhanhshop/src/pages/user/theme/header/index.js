@@ -10,7 +10,7 @@ import { formatters } from "utils/formatter";
 import { ROUTERS } from "utils/router";
 
 const HeaderLayout = () => {
-    const [isShowCategories, setShowCategories] = useState(true);   
+    const [isShowCategories, setShowCategories] = useState(true);
     const [menus] = useState([
         {
             name: "Trang chủ",
@@ -147,7 +147,7 @@ const HeaderLayout = () => {
                             Danh sách sản phẩm
                         </div>
                         {
-                                <ul className={isShowCategories ? "" : "hidden"}>
+                            <ul className={isShowCategories ? "" : "hidden"}>
                                 <li>
                                     <Link to={"#"}>Laptop gamming</Link>
                                 </li>
@@ -170,14 +170,14 @@ const HeaderLayout = () => {
                     <div className="col-lg-9 hero_search_container">
                         <div className="hero_search">
                             <div className="hero_search_form">
-                            <form>
-                                <input type="text" value="" name="" placeholder="Bạn muốn tìm gì ?"></input>
-                                <button type="submit">Tìm kiếm</button>
-                            </form>
+                                <form>
+                                    <input type="text" placeholder="Bạn muốn tìm gì ?" />
+                                    <button type="submit">Tìm kiếm</button>
+                                </form>
                             </div>
                             <div className="hero_search_phone">
                                 <div className="hero_phone_icon">
-                                    <AiOutlinePhone/>
+                                    <AiOutlinePhone />
                                 </div>
                                 <div className="hero_phone_number">
                                     <p>0123456789</p>
@@ -188,8 +188,8 @@ const HeaderLayout = () => {
                         <div className="hero_items">
                             <div className="hero_text">
                                 <span>Laptop xịn</span>
-                                <h2>Pc chất lượng <br/>
-                                nhất Việt Nam
+                                <h2>Pc chất lượng <br />
+                                    nhất Việt Nam
                                 </h2>
                                 <p>Miễn phi giao dịch</p>
                                 <Link to={"#"} className="primary_button">

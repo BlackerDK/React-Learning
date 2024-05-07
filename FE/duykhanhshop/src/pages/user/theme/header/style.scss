@@ -4,7 +4,7 @@
 .header_top {
     background: #f5f5f5;
 }
-$image_Blog:"/asset/user/images/Banner.jpg";
+$image_Blog:"/asset/user/images/hero/Banner.jpg";
 .header_top_right {
     //background: #f55183;
     display: flex;
@@ -322,20 +322,20 @@ $image_Blog:"/asset/user/images/Banner.jpg";
                     text-transform: uppercase;
                     font-weight: 700;
                     letter-spacing: 4px;
-                    color: map.get($theme-colors,"main");
+                    color: map.get($theme-colors,"primary-text");
                 }
                 h2{
                     font-size: 45px;
                     text-transform: uppercase;
                     font-weight: 700;
                     letter-spacing: 4px;
-                    color: map.get($theme-colors,"normal-text");
+                    color: map.get($theme-colors,"secondary-text");
                     line-height: 52px;
                     margin: 10px 0;
                 }
                 p{
                     font-size: 16px;
-                    color: #6f5f5f;
+                    color: map.get($theme-colors,"primary-text");
                     font-weight: 400;
                     line-height: 26px;
                     margin: 0 0 15px 0;
